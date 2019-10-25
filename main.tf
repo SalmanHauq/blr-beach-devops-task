@@ -40,6 +40,7 @@ resource "azurerm_public_ip" "test_publicIp" {
   location = "KoreaCentral"
   resource_group_name = "${azurerm_resource_group.test.name}"
   public_ip_address_allocation = "dynamic"
+  domain_name_label = "jenkins-pp"
 
   tags = {
     environment = "Production"
@@ -51,6 +52,7 @@ resource "azurerm_public_ip" "test_publicIp_loadBalancer" {
   location = "KoreaCentral"
   resource_group_name = "${azurerm_resource_group.test.name}"
   public_ip_address_allocation = "static"
+  domain_name_label = "petclininc-app"
 
   tags = {
     environment = "Production"
